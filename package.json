@@ -10,6 +10,7 @@
     "dev": "nodemon"
   },
   "repository": {
+    "type": "git",
     "url":"https://github.com/lsmith970/Hello-express.git"
   },
   "author": "lane smith",

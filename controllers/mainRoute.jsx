@@ -1,19 +1,20 @@
-const router = require("express").Router()
+const router= require("express").Router()
 
-router.get("/example", (req,res) => {
-    res.send("Hello, home!")
+router.get("/", (req, res) => {
+    res.sendFile("/public/index.html",
+    {root:process.cwd()})
 })
 
-router.get("/tigerpit", (req, res) => {
-    res.send(`You've fallen in the ${tigerpit}`)
-})
-router.get("/boobytrap", (req, res) => {
-    res.send(`You are in the ${boobytrap}`)
+router.get("/lostinspace", (req, res) => {
+    res.sendFile( "/public/lostinspace.html",
+    {root:process.cwd()})
 })
 router.get("/snakefarm", (req, res) => {
-    res.send(`Welcome to the ${snakefarm}, it's a reptile house`)
+    res.sendFile("/public/snakefarm.html",
+    {root:process.cwd()})
 })
+app.use(mainRouters)
 
-
+app.use(express.static('public'))
 
 module.exports = router
